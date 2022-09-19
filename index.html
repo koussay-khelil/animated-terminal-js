@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Animated Terminal</title>
+        <meta charset="utf-8">
+        <!-- include the termynal stylesheet -->
+        <link rel="stylesheet" href="./index.css">
+        <!-- some custom styles for the page -->
+        <link href="https://fonts.googleapis.com/css?family=Fira+Mono">
+        <script src="./app.js" data-termynal-container="#termynal"></script>
+        <style>
+            body {
+                --color-bg: #ddd;
+                --color-text: #1a1e24;
+                --color-text-subtle: #D76D77;
+
+                padding: 0; margin: 0;
+                background: black;
+                width: 100%;
+                min-height: 100vh;
+                display: -webkit-box; display: -ms-flexbox; display: flex;
+                -webkit-box-align: center; -ms-flex-align: center; align-items: center;
+                -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;
+                -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+            }
+        </style>
+    </head>
+    <body>
+      
+        <div id="termynal"></div>
+
+       
+        <script src="termynal.js"></script>
+        <script>
+          var termynal = new Termynal('#termynal', {
+            typeDelay: 40,
+            lineDelay: 700,
+            lineData: [
+              { type: 'input', prompt: '▲', value: 'lexfg> NFTs' },
+              { value: 'Loading' },
+              { type: 'progress', progressChar: '·' },
+              { value: 'securities law' },
+              { value: 'contracts' },
+              { value: 'erc-721' },
+              { value: 'sleep(10)' },
+              
+            ]
+          });
+        </script>
+    </body>
+</html>
